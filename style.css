@@ -30,16 +30,17 @@ nav{
     
     
 }
-.hamburger{
+/*.hamburger{
     grid-column: 3/4;
     display: flex;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 45px;                             //OLD HAMBURGER SVG
     margin-left: 45vh;
     cursor: pointer;
 
 
-}
+
+}*/
 
 section{
     display: flex;
@@ -105,4 +106,43 @@ section2{
     cursor: pointer;
 }
 
+/*  HAMBURGER: */
+
+#sidebar{
+    position: fixed;
+    width: 19.7vh;
+    height: 25%;
+    background: #151719;
+    right: -200px;
+    transition: all 500ms linear;
+    opacity: 0.9;
+    background-blend-mode: color-burn;
+    z-index: 2;
+   }
+   #sidebar.active{
+    right:0px;
+   }
+   #sidebar ul li{
+    color: rgba(230,230,230,0.9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+    opacity: 1;
+   }
+   #sidebar .hamburger{
+    position: absolute;
+    right: 500px;
+    top: 65px;
+   }
+   #sidebar .hamburger span{
+    cursor: pointer;
+    display: block;
+    width: 60px;
+    height: 10px;
+    background: #d8cd91;
+    margin: 10px 0px;
+ 
+   }
+
+   /* HAMBURGER END */
 

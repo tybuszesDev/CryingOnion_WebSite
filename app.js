@@ -5,6 +5,8 @@ const hamburger = document.querySelector('.hamburger');
 const headline = document.querySelector('.headline');
 const footer = document.querySelector('.footer');
 const image = document.querySelector('.image2');
+const hamburgerul = document.querySelector('hamburgerul')
+const sidebar = document.querySelector('sidebar')
 
 const coLogoWhitePath =  "./img/logo1.png";
 const coLogoBlackPath =  "./img/logo2.png";
@@ -33,7 +35,7 @@ darkMode.addEventListener('click', () => {
     })
     .add({
         targets: '#darkMode',
-        rotate: 320
+        rotate: toggle ? 380 :  -380
         
     } ,'-= 500'
     ).add({
@@ -58,8 +60,12 @@ darkMode.addEventListener('click', () => {
         targets: "nav",
         backgroundColor: toggle ? '#ba7453' : 'rgb(22,22,22)'
     },'-= 750'
-    )
+    ).add({
+        targets: "hamburger",
+        backgroundColor: toggle ? 'white' : 'black'
         
+    })
+    
         
     ;
     //Everytime we click no the sun I wantt that toggle to switch
@@ -107,6 +113,10 @@ tl.fromTo(
 .fromTo(logo, 0.5, {opacity: 0, x:30}, {opacity:1, x:0}, "-=0.5")
 .fromTo(hamburger, 0.5, {opacity: 0, x:30}, {opacity:1, x:0}, "-=0.5")
 .fromTo(headline, 0.5, {opacity: 0, x:30}, {opacity:1, x:0}, "-=1");
+
+function toggleSidebar(){
+    document.getElementById("sidebar").classList.toggle('active');
+   }
 
 
 
