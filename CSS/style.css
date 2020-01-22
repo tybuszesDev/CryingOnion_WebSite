@@ -123,6 +123,7 @@ section2{
     right:0px;
    }
    #sidebar ul li{
+    cursor: pointer;
     color: rgba(230,230,230,0.9);
     list-style: none;
     padding: 15px 10px;
