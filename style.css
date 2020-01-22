@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(to left, #ba7453, #d1a984);
+    z-index: -1;  /* przesuwa warstwe do tylu */
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    min-height: 8vh;
+    max-height: 14vh;
+    color: white;
+    align-items: center;
+}
+
+#logo {
+    grid-column: 2/4;
+    margin-top: 45px;
+    
+    
+    
+}
+.hamburger{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-left: 45vh;
+    cursor: pointer;
+
+
+}
+
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    height: 60%;
+    width: 100%;
+    position: relative;
+    transform: scaleY(0.9);
+    
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headline{
+    position: absolute;
+    bottom:1%;
+    left: 5%;
+    font-size:50px;
+    transform: translate(-20%, -70%);
+    color: white;
+    z-index: 3;
+}
+
+.hero::after{
+    content:"";
+    background: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.1;
+    top: 0;
+
+}
+
+section2{
+    height: 100vg;
+    background: #ba7453;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.darkone{                   /*  svg przycisku dark/light  */
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-left: 154vh;
+    
+}
+
+.image2{
+    cursor: pointer;
+}
+
+
