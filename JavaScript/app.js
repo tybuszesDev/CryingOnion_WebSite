@@ -1,11 +1,11 @@
 const hero = document.querySelector('.hero');
 const slider = document.querySelector('.slider');
 const logo = document.querySelector('#logo');
-const hamburger = document.querySelector('.hamburger');
 const headline = document.querySelector('.headline');
 const footer = document.querySelector('.footer');
 const image = document.querySelector('.image2');
 const hamburgerul = document.querySelector('hamburgerul')
+const hamburger = document.querySelector(".hamburger");
 const sidebar = document.querySelector('sidebar')
 
 const coLogoWhitePath =  "./img/logo1.png";
@@ -117,6 +117,22 @@ tl.fromTo(
 function toggleSidebar(){
     document.getElementById("sidebar").classList.toggle('active');
    }
+
+   //NAV BAR AND HAMBURGER ------------------------------------
+
+   const navLinks = document.querySelector(".nav-links");
+   const links = document.querySelectorAll(".nav-links li");
+   
+   hamburger.addEventListener('click', () => {
+       navLinks.classList.toggle("open");
+       links.forEach(link =>{
+           link.classList.toggle('fade');
+       });
+       
+   });
+
+   //------------------------------------------------------------------
+   
 
 
 

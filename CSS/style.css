@@ -2,6 +2,14 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+body{
+    height: 100vh;
+       background-color: rgb(87,189,130);
+       transition: background 0.5s ease;
+       position: relative;
+       font-family: 'Source Code Pro', monospace;
 }
 
 .slider{
@@ -15,8 +23,7 @@
 }
 
 nav{
-    display: grid;
-    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    display: flex;
     min-height: 8vh;
     max-height: 14vh;
     color: white;
@@ -24,7 +31,7 @@ nav{
 }
 
 #logo {
-    grid-column: 2/4;
+    margin-left: 10%;
     margin-top: 45px;
     
     
@@ -106,7 +113,7 @@ section2{
     cursor: pointer;
 }
 
-/*  HAMBURGER: */
+/*  OLD HAMBURGER: 
 
 #sidebar{
     position: fixed;
@@ -145,5 +152,116 @@ section2{
  
    }
 
-   /* HAMBURGER END */
+   */ /* HAMBURGER END */
+
+   /* NEW HAMBURGER WITH NAV BAR */
+
+   nav{
+    height: 10vh;
+    background: none;
+}
+
+.nav-links{
+    display:flex;
+    margin-top: 5%;
+    margin-right: 10%;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a {
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Bangers', regular;
+    letter-spacing: 3px;
+}
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1{
+    margin: 100px;
+    font-size:50px;
+    color: #ae5fce;
+}
+
+@media screen and (max-width: 768px){
+    
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    
+    
+    .nav-links{
+        position: fixed;
+        background: #5b78c7;
+        height: 100vh;
+        width: 100vh;
+        z-index: 1;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+
+    }
+    .landing{
+        flex-direction: column;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li a{
+        font-size: 25px;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.25s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.5s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.75s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+
+.credits{
+        font-size: 22px;
+        font-weight: 700;
+}
+
 

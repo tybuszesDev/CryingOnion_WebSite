@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
     <title>CryingOnion</title>
 </head>
 </header>
@@ -13,8 +15,7 @@
     
 
 
-    <header>
-
+    <!--                                                                    OLD HAMBURGER
         <div id="sidebar">
             <div class="hamburger" onclick="toggleSidebar()"><a>
              <span></span>
@@ -24,24 +25,31 @@
             </div>
             <ul>
              <li onclick="openHome()">Home</li>
-             <li  onclick="openWin2()">Page2</li>
-             <li  onclick="openWin3()">Page3</li>
+             <li  onclick="openWin2()">Login</li>
+             <li  onclick="openWin3()">About</li>
             </ul>
            </div>
+           -->
+
+
+           
+
         <nav>
             <h3 id="logo">
                 <img class="image2" src="./img/logo2.png" alt="blabla">
                 
                 
             </h3>
-            <h5><!-- 
-                <svg width="75" height="69" viewBox="0 0 75 69" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger">
-                    <path d="M0 0H75V15H0V0Z" fill="#C4C4C4"/>                                                             
-                    <path d="M0 27H50V42H0V27Z" fill="#C4C4C4"/>                                                                    
-                    <path d="M0 54H26V69H0V54Z" fill="#C4C4C4"/>
-                    </svg>
-                    -->
-            </h5>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home </a><i class="fas fa-home fa-2x"></i></a></li>
+                <li><a href="./page2.html">Login </a><i class="fas fa-key fa-2x"></i></li>
+                <li><a href="./page3.html">About </a><i class="fas fa-book-open fa-2x"></i></li>
+            </ul>
             
                 
             
@@ -74,6 +82,7 @@
         <div class="credits">
             made by Łukasz Tybuszewski tybuszesDev
         </div>
+    
         
         
             
@@ -96,6 +105,7 @@
     <script src="JavaScript/app.js"></script>
     <script src="JavaScript/anime.min.js" ></script>
     <script> src="C:\Users\tybuszes\Desktop\JS animactions\pageAnimation1\img"</script>
+    <script src="https://kit.fontawesome.com/79b3927208.js" crossorigin="anonymous"></script>
     
 </body>
 </html>

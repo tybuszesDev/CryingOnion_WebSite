@@ -1,36 +1,199 @@
-#sidebar{
-    position: fixed;
-    width: 19.7vh;
-    height: 25%;
-    background: #151719;
-    right: -200px;
-    transition: all 500ms linear;
-    opacity: 0.9;
-    background-blend-mode: color-burn;
-    z-index: 2;
+
+
+   body{
+       height: 100vh;
+       background-color: rgb(87,189,130);
+       transition: background 0.5s ease;
+       position: relative;
+       font-family: 'Source Code Pro', monospace;
    }
-   #sidebar.active{
-    right:0px;
+
+   /* REGISTER FORM ----------------------------------------------*/
+
+   .field-name,
+   .field-email,
+   .field-password,
+   .field-finish {
+       position: absolute;
+       top:50%;
+       left:50%;
+       transform:translate(-50%, -50%);
+       background-color: white;
+       height:100px;
+       width: 550px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border-radius: 10px;
+       transition: all 0.5s ease;
+       
+       
+       
    }
-   #sidebar ul li{
+
+   .field-name i,
+   .field-email i,
+   .field-password i,
+   .field-finish i {
+    padding: 10px;
     cursor: pointer;
-    color: rgba(230,230,230,0.9);
-    list-style: none;
-    padding: 15px 10px;
-    border-bottom: 1px solid rgba(100,100,100,0.3);
+    font-size: 30px;
+    
+    
+}
+
+.field-name input,
+.field-email input,
+.field-password input,
+.field-finish{
+    background:none;
+    border: none;
+    flex: 1;
+    height:100%;
+    outline: none;
+    font-size: 40px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+div.innactive{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+}
+
+div.active{
     opacity: 1;
-   }
-   #sidebar .hamburger{
-    position: absolute;
-    right: 500px;
-    top: 65px;
-   }
-   #sidebar .hamburger span{
-    cursor: pointer;
-    display: block;
-    width: 60px;
-    height: 10px;
-    background: #d8cd91;
-    margin: 10px 0px;
- 
-   }
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+.form-text{
+    position: relative;
+    top:25vh;
+    left: 50vh;
+    justify-content: space-between;                                                         /* here we are */
+    align-items: center;
+    letter-spacing: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+
+/* NAVIGATION BAR WITH HAMBURGER */
+
+nav{
+    height: 10vh;
+    background: none;
+}
+
+.nav-links{
+    display:flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a {
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Source Code Pro', monospace;
+}
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1{
+    margin: 100px;
+    font-size:50px;
+    color: #ae5fce;
+}
+
+@media screen and (max-width: 768px){
+    
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    
+    
+    .nav-links{
+        position: fixed;
+        background: #5b78c7;
+        height: 100vh;
+        width: 100vh;
+        z-index: 1;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+
+    }
+    .landing{
+        flex-direction: column;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li a{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.25s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.5s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.75s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+
+    
+}
+/* -------------------------------------------------------------------------- */
+
