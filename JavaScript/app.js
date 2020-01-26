@@ -7,6 +7,7 @@ const image = document.querySelector('.image2');
 const hamburgerul = document.querySelector('hamburgerul')
 const hamburger = document.querySelector(".hamburger");
 const sidebar = document.querySelector('sidebar')
+const credits = document.querySelector('.credits')
 
 const coLogoWhitePath =  "./img/logo1.png";
 const coLogoBlackPath =  "./img/logo2.png";
@@ -18,6 +19,7 @@ const sunPath =
 const darkMode = document.querySelector('#darkMode');
 let toggle = false;
 let logopath= coLogoBlackPath;
+
 
 // WE NEED TO CLICK ON THE SUN
 
@@ -42,29 +44,30 @@ darkMode.addEventListener('click', () => {
         targets: ".image2",
         rotate: toggle ? 360 : -360,
         
-        src: toggle ? coLogoBlackPath: coLogoWhitePath
+        src: toggle ?  coLogoWhitePath : coLogoBlackPath
         
         }
      ).add({
         targets: "section",
-        backgroundColor: toggle ? '#ba7453' :  'rgb(22,22,22)'
+        'background': toggle ? 'linear-gradient(to left, black, #41403f)' :  'linear-gradient(to left, #0100ff, white)'
     }).add({
         targets: "section2",
-        background: toggle ? '#ba7453' : 'rgb(22,22,22)'
+        'background': toggle ? 'linear-gradient(to left, black, #41403f)' :  'linear-gradient(to left, #0100ff, white)'
     },'-= 500'
     ).add({
         targets: "slider",
-        backgroundColor: toggle ? '#ba7453' : 'rgb(22,22,22)'
+        'background': toggle ? 'linear-gradient(to left, black, #41403f)' :  'linear-gradient(to left, #0100ff, white)'
     },'-= 750'
     ).add({
         targets: "nav",
-        backgroundColor: toggle ? '#ba7453' : 'rgb(22,22,22)'
+        'background': toggle ? 'linear-gradient(to left, black, #41403f)' :  'linear-gradient(to left, #0100ff, white)'
     },'-= 750'
     ).add({
         targets: "hamburger",
         backgroundColor: toggle ? 'white' : 'black'
-        
+         
     })
+
     
         
     ;

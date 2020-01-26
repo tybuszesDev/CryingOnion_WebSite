@@ -1,7 +1,62 @@
+body{
+    margin: 0;
+    padding:0;
+
+    font-family: 'Righteous', cursive;
+    letter-spacing: 6px;
+    
+    
+
+}
+
+#particles-js
+{
+    position: relative;
+    display: block;
+    height: 100vh;
+    background: linear-gradient(135deg, black, black,black,  	rgb(22, 34, 2));
+    border-radius: 10pt;
+    
+    
+}
+
+/* TYPEWRITING EFFECT  -----------------------------------------------       */
+
+.intro{
+    position: absolute;
+    display: flex;
+    color: white;
+    padding-top: 300px;
+    padding-left: 300px;
+    font-size: 26px;
+    
+    
+}
+
+.typing{
+    margin-left:  30px;
+    color: yellow;
+    
+}
+
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-right: 2px solid white ;
+    animation: blink 1s infinite ease;
+    
+    
+
+}
+
+/*--------------------------------------------------------------------------------*/
+
 #sidebar{
-    position: fixed;
+    position: relative;
     width: 19.7vh;
-    height: 25%;
+    height: 20%;
     background: #151719;
     right: -200px;
     transition: all 500ms linear;
@@ -34,3 +89,152 @@
     margin: 10px 0px;
  
    }
+
+   /* blink for typewriting effect */
+
+   @keyframes blink{
+       0%{
+        opacity: 0;
+       }
+       100%{
+        opacity: 1;
+       }
+   }
+
+   /*----------------------------------*/
+
+.backHome{
+    position: absolute;
+    display: flex;
+    color: white;
+    padding-top: 4%;
+    padding-left: 85%;
+    font-size: 30px;
+    text-decoration: none;
+}
+.backHome li{
+    list-style: none;
+    }
+.backHome li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+   /* NAVIGATION BAR WITH HAMBURGER */
+/*
+.hamburger{
+    position: relative;
+    height: 2vh;
+    background: none;
+    font-family: 'Righteous', cursive;
+    z-index: -1;
+}
+
+.nav-links{
+    position: relative;
+    display:flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a {
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1{
+    margin: 100px;
+    font-size:50px;
+    color: #ae5fce;
+}
+
+@media screen and (max-width: 768px){
+    
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+    
+    
+    .nav-links{
+        position: fixed;
+        background: #5b78c7;
+        height: 100vh;
+        width: 100vh;
+        z-index: 1;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .nav-links li i{
+        color: white;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li a{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.25s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.5s;
+    }
+    .nav-links li:nth-child(1){
+        transition:  all 0.5s ease 0.75s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+
+    
+}
+*/
+/* -------------------------------------------------------------------------- */
+
+.pg2{
+    height:100vh;
+    background:  linear-gradient(45deg, black, black,black,  	rgb(22, 34, 2));
+    color: white;
+    
+}
