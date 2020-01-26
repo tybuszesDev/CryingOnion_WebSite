@@ -10,6 +10,7 @@ body{
        transition: background 0.5s ease;
        position: relative;
        font-family: 'Source Code Pro', monospace;
+       overflow: hidden;
 }
 
 .slider{
