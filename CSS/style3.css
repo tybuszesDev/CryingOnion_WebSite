@@ -8,6 +8,9 @@ body{
     
 
 }
+
+
+
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */}
@@ -23,6 +26,8 @@ body{
 }
 
 /* TYPEWRITING EFFECT  -----------------------------------------------       */
+.intro::selection {background: yellow; color:yellow; } 
+.typing::selection {background: yellow; color:yellow; } 
 
 .intro{
     position: absolute;
@@ -53,7 +58,25 @@ body{
 
 }
 
+
 /*--------------------------------------------------------------------------------*/
+
+/*     THE TEXT      */
+
+.theText{
+    font-family: 'Source Code Pro', monospace;
+    position: absolute;
+    top: 50vh;
+    left:60vh;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
 
 #sidebar{
     position: relative;

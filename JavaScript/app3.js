@@ -1,6 +1,7 @@
 const intro = document.querySelector('.intro');
 const backhome= document.querySelector('.backHome')
 const background = document.querySelector('.background')
+const thetext = document.querySelector('.theText')
     
     
     const tl = new TimelineMax();
@@ -13,12 +14,20 @@ const background = document.querySelector('.background')
     {x: '0%',
     ease: Power2.easeInOut},  // ladniejszy sposob rozchodzenia się
     ).fromTo(
+        thetext,   //dotyczy obiektu hero
+        1.5,
+        {x: '300%'}, 
+        {x: '0%',
+        ease: Power2.easeInOut},  // ladniejszy sposob rozchodzenia się;
+        ).fromTo(
     backhome,   //dotyczy obiektu hero
     1.5,
     {y: '-100%'}, 
     {y: '0%',
     ease: Power2.easeInOut},  // ladniejszy sposob rozchodzenia się;
     )
+
+    
     
 
 
@@ -58,11 +67,12 @@ let letter = '';                        //idividual letter change dinamicaly
     setTimeout(type, 500);              // You can change the speed 
 
 }());                               // RUN IMMADIETLY (SELF INVOLVED)
+                          // RUN IMMADIETLY (SELF INVOLVED)
 
 // ----------------------------------------------------------------------------------------
 
   //NAV BAR AND HAMBURGER ------------------------------------
-
+/*
   const navLinks = document.querySelector(".nav-links");
   const links = document.querySelectorAll(".nav-links li");
   
@@ -73,6 +83,6 @@ let letter = '';                        //idividual letter change dinamicaly
       });
       
   });
-
+*/
   //------------------------------------------------------------------
   
